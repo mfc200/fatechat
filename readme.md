@@ -46,7 +46,6 @@ Para acessar o chat recente, login, criação de usuário e usuários ativos, o 
 - `http://localhost:3000/api/chat/` — POST, GET
 - `http://localhost:3000/api/chat/:id/messages`
 
-A documentação detalhada das APIs está disponível [aqui](Postman API doc).
 
 ### Eventos de Socket
 
