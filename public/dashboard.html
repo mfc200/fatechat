@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FATECHAT • Salas</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="dash-shell">
+      <div class="dash-card">
+        <header class="dash-header">
+          <div>
+            <h1 class="dash-title">FATECHAT</h1>
+            <p class="dash-subtitle">Escolha ou crie uma sala para conversar.</p>
+          </div>
+          <button class="btn-ghost leave-btn">Sair</button>
+        </header>
+
+        <section class="dash-main">
+          <div class="dash-form">
+            <label for="message-input">Nome da sala</label>
+            <div class="dash-input-row">
+              <input
+                type="text"
+                class="roomInput"
+                id="message-input"
+                placeholder="Ex.: ADS Noite, Projeto ES3, Grupo POO"
+              />
+              <button class="btn-primary create-room">Criar sala</button>
+            </div>
+            <button class="btn-outline see-room">Atualizar lista de salas</button>
+            <div class="error-text"></div>
+          </div>
+
+          <div class="dash-rooms">
+            <h2 class="rooms-title">Salas disponíveis</h2>
+            <ul id="room-list" class="rooms-list">
+              <!-- preenchido via JS -->
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
