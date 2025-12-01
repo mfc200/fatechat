@@ -4,7 +4,8 @@
 
 Uma aplicação de chat em Node.js alimentada por Kafka, Redis e WebSocket (Socket.io). Isso fornece robustez no processamento de mensagens em tempo real e escalabilidade — requisitos essenciais para praticamente qualquer aplicação de chat que precise lidar com diversos tipos de interações.
 
-![Imagem](IMAGE)
+<img width="543" height="314" alt="image" src="https://github.com/user-attachments/assets/746377b2-45e3-408e-893e-19b9eb23d821" />
+
 
 ## Funcionalidades
 
@@ -79,7 +80,8 @@ Acesse `localhost:3000` para explorar o sistema. Para ver a aplicação funciona
 5. Entre em uma sala clicando no nome
 6. Interaja pelo chat
 
-![Imagem](IMAGE)
+<img width="1175" height="565" alt="Captura de tela 2025-11-30 214819" src="https://github.com/user-attachments/assets/c10381e2-235b-40fb-852d-4bca3845bb16" />
+
 
 ## Configuração
 
@@ -95,13 +97,11 @@ Para tornar o sistema mais responsivo, utilizamos Redis e MySQL em conjunto. Qua
 2. Consumidores dedicados nos servidores capturam a mensagem.
 3. Ela é enviada imediatamente ao usuário alvo via WebSocket.
 
-![Imagem](IMAGE)
 
 O Kafka oferece suporte a mensagens distribuídas, garantindo escalabilidade e confiabilidade. Ele permite conectar e operar vários servidores WebSocket usando diferentes consumer groups. Assim, cada servidor recebe todas as mensagens, analisa quais devem ser enviadas aos seus usuários conectados e mantém o sistema escalável e eficiente.
 
 Para reduzir ainda mais a latência, o fluxo de mensagens também é sincronizado com o Redis. A estrutura de dados no Redis mantém a relação entre usuários ativos e seus respectivos IDs de socket, garantindo rastreamento em tempo real por sala.
 
-![Imagem](IMAGE)
 
 Quando eventos como `joinRoom` ou `disconnect` acontecem, o Redis mantém o registro atualizado de usuários ativos, garantindo monitoramento dinâmico das salas.
 
